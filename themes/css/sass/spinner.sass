@@ -1,0 +1,61 @@
+/*
+ * /// HTML /// 
+ * - copy to bottom of index.html -
+ * 
+ * <div id="progress">
+ *   <div id="spinner">
+ *     <div id="spinnerL"></div>
+ *     <div id="spinnerS"></div>
+ *   </div>
+ * </div>
+ */
+
+$bg:      black
+$color:   white
+$acr:     30px
+$weight:  2px
+$dash:    1px
+$glow:    10px
+$speed:   1s
+
+#spinner
+  position: absolute
+  top: 50%
+  left: 50%
+  margin-left: - $acr / 2
+  div
+    border: $weight solid $color
+    border-right: $dash solid $bg
+    border-left: $dash solid $bg
+    margin: 0 auto
+    border-radius: $acr
+
+#spinnerL
+  width: $acr
+  height: $acr
+  box-shadow: 0 0 $glow $color
+  +animate(pulse, $speed, ease-in-out, .01s, infinite)
+
+#spinnerS
+  position: relative
+  top: -$acr
+  width: $acr
+  height: $acr
+  +animate(goround, $speed, linear, .01s, infinite)
+
++keyframes(pulse)
+  0%
+    +transform(scale(0.9) rotate(160deg))
+    +opacity(0)
+  70%
+    +transform(scale(1) rotate(150deg))
+    +opacity(1)
+  100%
+    +transform(scale(3) rotate(0deg))
+    +opacity(0)
+
++keyframes(goround)
+  0%
+    +transform(rotate(0deg))
+  100%
+    +transform(rotate(720deg))

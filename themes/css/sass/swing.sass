@@ -1,0 +1,28 @@
+/*
+ * /// HTML /// 
+ * - copy to bottom of index.html -
+ * 
+ * <div id="progress">
+ *   <div id="swing"></div>
+ * </div>
+ */
+
+$color:   grey
+$speed:   0.5s
+
+#swing
+  position: absolute
+  top: 0
+  left: 0%
+  width: 20%
+  height: 10px
+  background-color: $color
+  +animate(swing, $speed, ease-in-out, .01s, infinite, alternate)
+
++keyframes(swing)
+  0%
+    background-color: $color
+    left: 0%
+  100%
+    background-color: $color
+    left: 80%
