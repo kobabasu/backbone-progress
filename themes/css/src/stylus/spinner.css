@@ -1,0 +1,30 @@
+#spinner{position:absolute;top:50%;left:50%;margin-left:-15px;}
+#spinner div{border:2px solid #fff;border-right:1px solid #000;border-left:1px solid #000;margin:0 auto;border-radius:30px}
+#spinnerL{width:30px;height:30px;box-shadow:0 0 10px #fff;animation:pulse 1s ease-in-out .01s infinite}
+#spinnerS{position:relative;top:-30px;width:30px;height:30px;animation:goround 1s linear .01s infinite}
+@-moz-keyframes pulse{0%{transform:scale(.9) rotate(160deg);opacity:0}
+70%{transform:scale(1) rotate(150deg);opacity:1}
+100%{transform:scale(3) rotate(0);opacity:0}
+}@-webkit-keyframes pulse{0%{transform:scale(.9) rotate(160deg);opacity:0}
+70%{transform:scale(1) rotate(150deg);opacity:1}
+100%{transform:scale(3) rotate(0);opacity:0}
+}@-o-keyframes pulse{0%{transform:scale(.9) rotate(160deg);opacity:0}
+70%{transform:scale(1) rotate(150deg);opacity:1}
+100%{transform:scale(3) rotate(0);opacity:0}
+}@-ms-keyframes pulse{0%{transform:scale(.9) rotate(160deg);opacity:0}
+70%{transform:scale(1) rotate(150deg);opacity:1}
+100%{transform:scale(3) rotate(0);opacity:0}
+}@keyframes pulse{0%{transform:scale(.9) rotate(160deg);opacity:0}
+70%{transform:scale(1) rotate(150deg);opacity:1}
+100%{transform:scale(3) rotate(0);opacity:0}
+}@-moz-keyframes goround{0%{transform:rotate(0)}
+100%{transform:rotate(720deg)}
+}@-webkit-keyframes goround{0%{transform:rotate(0)}
+100%{transform:rotate(720deg)}
+}@-o-keyframes goround{0%{transform:rotate(0)}
+100%{transform:rotate(720deg)}
+}@-ms-keyframes goround{0%{transform:rotate(0)}
+100%{transform:rotate(720deg)}
+}@keyframes goround{0%{transform:rotate(0)}
+100%{transform:rotate(720deg)}
+}
