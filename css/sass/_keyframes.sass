@@ -1,0 +1,12 @@
+=animate($name: fadeIn, $duration: 1s, $function: ease, $delay: 0s, $count: infinite, $direction: normal)
+  +experimental(animation, $name $duration $function $delay $count $direction)
+
+=keyframes($name)
+  @-moz-keyframes #{$name}
+    @content
+  @-webkit-keyframes #{$name}
+    @content
+  @-ms-keyframes #{$name}
+    @content
+  @keyframes #{$name}
+    @content
