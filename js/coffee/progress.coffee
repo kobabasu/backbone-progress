@@ -15,11 +15,15 @@ define [
       @_fnc = fnc
       @_total = @_imgs.length
 
-      while @_cnt < @_total
-        img = new Image()
-        img.src = @_imgs[@_cnt]
-        img.addEventListener 'load',@loaded,false
-        @_cnt++
+      if @_total > 0
+        while @_cnt < @_total
+          img = new Image()
+          img.src = @_imgs[@_cnt]
+          img.addEventListener 'load',@loaded,false
+          @_cnt++
+      else
+        @_fnc()
+        @start()
 
     loaded: =>
       @_loaded++
